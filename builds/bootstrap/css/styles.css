@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Raleway");
+/* colors pistoule logo */
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+/* 
+allez sur https://fonts.google.com/ recupérer les polices voulu et selectionner @import
+font-family: 'Roboto Slab', Helvetica, sans-serif;
+font-family: 'Merriweather', Helvetica, sans-serif;
+font-family: 'Josefin Slab',Helvetica, sans-serif;
+font-family: 'Oswald',Helvetica, sans-serif;
+font-family: 'Bree Serif',Helvetica, sans-serif;
+*/
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Josefin+Slab|Merriweather|Oswald|Roboto+Slab");
+body {
+  background-color: #fff; }
+
+.masthead,
+.page-title,
+.main-content,
+.sidebar,
+.footer-content {
+  padding: 1em;
+  color: white; }
+
+.masthead {
+  background-color: #b46ae3; }
+
+.page-title {
+  background-color: #FFFFFF; }
+
+.main-content {
+  background-color: #70bf40; }
+
+.sidebar {
+  background-color: #f49018; }
+
+.footer-content {
+  background-color: #0265c0; }
+
+.site {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 4fr;
+  grid-template-areas: "masthead masthead masthead masthead" "title title title title" "main main main main" "sidebar sidebar sidebar sidebar" "footer footer footer footer"; }
+
+@media screen and (max-width: 600px) {
+  .site {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "title title title" "main masthead masthead" "main sidebar footer"; } }
+
+.masthead {
+  grid-area: masthead; }
+
+h1.masthead {
+  color: white; }
+
+.page-title {
+  grid-area: title; }
+
+.main-content {
+  grid-area: main; }
+
+.sidebar {
+  grid-area: sidebar; }
+
+.footer-content {
+  grid-area: footer; }
