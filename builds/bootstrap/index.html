@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,72 +12,98 @@
   <link rel="stylesheet" href="css/style-main.css" media="all">
   <link rel="stylesheet" href="css/style-grid.css" media="all">
 
-  
+
   <title>Bootstrap</title>
 </head>
 
 <body class="site">
+  <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-  <header class="clearfix masthead" style="height: 80vh;
-   background: url(images/pizza.jpg)
-    no-repeat center center; 
-    background-size: cover; 
-    margin-bottom: 20px;
-    ">
-    <code class="identifier"><pre>.masthead</pre></code>
-    <div class="container text-center">
-      <img src="images/OTTO-400x400.png " alt="OTTO-400x400.png" class="img-fluid mx-auto" style="z-index: -1;" >
+  <header class="masthead">
+    <code class="identifier">
+      <pre>.masthead</pre>
+    </code>
+    <h2>CSS Grid</h2>
+    <header class="clearfix masthead" style="height: 80vh;
+           background: url(images/pizza.jpg)
+            no-repeat center center; 
+            background-size: cover; 
+            margin-bottom: 20px;z-index:-101;
+            ">
+      <code class="identifier">
+        <pre>.masthead</pre>
+      </code>
+      <div class="container text-center">
+        <img src="images/OTTO-400x400.png " alt="OTTO-400x400.png" class="img-fluid mx-auto" id="otto">
       </div>
-  </header> <!-- .masthead -->
+    </header>
+    <!-- .masthead -->
+  </header>
+  <!-- .masthead -->
+
   <div class="page-title">
-        <code class="identifier"><pre>.page-title</pre></code>
-        <h1>Demo sandbox for Advanced Layouts with CSS Grid</h1>
-    </div><!-- .page-title -->
+    <code class="identifier">
+      <pre>.page-title</pre>
+    </code>
+    <h1>Demo sandbox for Advanced Layouts with CSS Grid</h1>
+  </div>
+  <!-- .page-title -->
 
-    <main id="content" class="main-content">
-        <code class="identifier"><pre>.main-content</pre></code>
-        <h2>Main content</h2>
-        <p>This is where the main bulk of the document content would go.</p>
-    </main><!-- #content .main-content -->
+  <main id="content" class="main-content">
+    <code class="identifier">
+      <pre>.main-content</pre>
+    </code>
+    <h2>Main content</h2>
+    <p>This is where the main bulk of the document content would go.</p>
+  </main>
+  <!-- #content .main-content -->
 
-    <aside class="sidebar">
-        <code class="identifier"><pre>.sidebar</pre></code>
-        <h2>Sidebar</h2>
-        <p>The place where things of less relevance appears.</p>
-    </aside><!-- .sidebar -->
+  <aside class="sidebar">
+    <code class="identifier">
+      <pre>.sidebar</pre>
+    </code>
+    <h2>Sidebar</h2>
+    <p>The place where things of less relevance appears.</p>
+  </aside>
+  <!-- .sidebar -->
 
-    <footer class="footer-content">
-        <code class="identifier"><pre>.footer-content</pre></code>
-        <h2>Footer</h2>
-        <p><span class="bg">The place where site nav and other meta info typically appears.</span></p>
-    </footer><!-- .footer-content -->
-  
+  <footer class="footer-content">
+    <code class="identifier">
+      <pre>.footer-content</pre>
+    </code>
+    <h2>Footer</h2>
+    <p>
+      <span class="bg">The place where site nav and other meta info typically appears.</span>
+    </p>
+  </footer>
+  <!-- .footer-content -->
 
-<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 
-<script>
-$(function() {
-  var topoffset = 70; //variable for menu height
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-  //Use smooth scrolling when clicking on navigation
-  $('.navbar-nav a').click(function() {
-    if (location.pathname.replace(/^\//,'') ===
-      this.pathname.replace(/^\//,'') &&
-      location.hostname === this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top-topoffset
-        }, 500);
-        return false;
-      } //target.length
-    } //click function
-  }); //smooth scrolling
-});
+  <script>
+    $(function () {
+      var topoffset = 70; //variable for menu height
 
-</script>
+      //Use smooth scrolling when clicking on navigation
+      $('.navbar-nav a').click(function () {
+        if (location.pathname.replace(/^\//, '') ===
+          this.pathname.replace(/^\//, '') &&
+          location.hostname === this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - topoffset
+            }, 500);
+            return false;
+          } //target.length
+        } //click function
+      }); //smooth scrolling
+    });
+  </script>
 </body>
+
 </html>
